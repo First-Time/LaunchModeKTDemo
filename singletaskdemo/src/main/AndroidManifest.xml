@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.lyf.launchmodektdemo">
+    package="com.lyf.singletaskdemo">
 
     <application
         android:allowBackup="true"
@@ -9,26 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OtherInstanceActivity"></activity>
-        <activity
-            android:name=".SingleInstanceActivity"
-            android:launchMode="singleInstance">
-            <intent-filter>
-                <action android:name="com.lyf.test.singleinstancektdemo" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".OtherTaskActivity" />
         <activity
             android:name=".SingleTaskActivity"
             android:launchMode="singleTask"
-            android:taskAffinity="com.lyf.test.singleTask" />
-        <activity android:name=".OtherTopActivity" />
-        <activity
-            android:name=".SingleTopActivity"
-            android:launchMode="singleTop" />
-        <activity android:name=".StandardActivity" />
+            android:taskAffinity="com.lyf.test.singleTask"></activity>
         <activity android:name=".BaseActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
