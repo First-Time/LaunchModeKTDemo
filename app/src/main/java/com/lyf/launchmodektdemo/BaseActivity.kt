@@ -15,26 +15,49 @@ open class BaseActivity : AppCompatActivity() {
         actionBar = supportActionBar!!
         actionBar?.setDisplayHomeAsUpEnabled(true)
 
-        log("*****onCreate()方法*****")
         printTaskInfo(this, "onCreate")
         dumpTaskAffinity(this)
     }
 
     override fun onNewIntent(intent: Intent?) {
         super.onNewIntent(intent)
-        log("*****onNewIntent()方法*****")
         printTaskInfo(this, "onNewIntent")
         dumpTaskAffinity(this)
     }
 
+    override fun onRestart() {
+        super.onRestart()
+        printTaskInfo(this, "onRestart")
+    }
+
     override fun onStart() {
         super.onStart()
-        log("*****onStart()方法*****")
+        printTaskInfo(this, "onStart")
     }
 
     override fun onResume() {
         super.onResume()
-        log("*****onResume()方法*****")
+        printTaskInfo(this, "onResume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        printTaskInfo(this, "onPause")
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        printTaskInfo(this, "onSaveInstanceState")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        printTaskInfo(this, "onStop")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        printTaskInfo(this, "onDestroy")
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

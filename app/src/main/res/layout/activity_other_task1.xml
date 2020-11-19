@@ -4,16 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OtherTaskActivity">
+    tools:context=".OtherTask1Activity">
 
     <Button
-        android:id="@+id/btn_task"
+        android:id="@+id/btn_task2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="启动SingleTaskActivity"
+        android:text="启动OtherTask2Activity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

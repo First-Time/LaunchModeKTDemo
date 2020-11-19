@@ -9,16 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OtherInstanceActivity"></activity>
+        <activity android:name=".OtherInstanceActivity" />
         <activity
             android:name=".SingleInstanceActivity"
-            android:launchMode="singleInstance">
+            android:launchMode="singleInstance"
+            android:taskAffinity="com.lyf.test.singleinstancedemo">
             <intent-filter>
                 <action android:name="com.lyf.test.singleinstancektdemo" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".OtherTask2Activity" />
+        <activity android:name=".OtherTask1Activity" />
         <activity android:name=".OtherTaskActivity" />
         <activity
             android:name=".SingleTaskActivity"

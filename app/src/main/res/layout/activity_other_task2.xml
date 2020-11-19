@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OtherTaskActivity">
+    tools:context=".OtherTask2Activity">
 
     <Button
         android:id="@+id/btn_task"
